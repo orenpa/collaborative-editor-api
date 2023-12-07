@@ -1,9 +1,12 @@
 import { Router } from "express";
 import CodeBlock from "../models/codeBlockModel";
 
+//router object that will define routes
 const router = Router();
 
 // GET all code blocks
+//route handler for GET requests to the root path ('/') of the router
+//asynchroninsly GET all codeblocks from MongoDB database
 router.get("/", async (req, res) => {
   try {
     const codeBlocks = await CodeBlock.find({});
@@ -14,6 +17,8 @@ router.get("/", async (req, res) => {
 });
 
 // GET a specific code block by ID
+//route handler for GET requests to ('/:d') where id is a placeholder for a specific cofeblock if
+//asynchroninsly GET a codblock by its id
 router.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;

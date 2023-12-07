@@ -7,7 +7,7 @@ const CodeBlockSchema = new mongoose.Schema({
   code: String,
 });
 
-// Create the model
+// Create the model of mongoode that represents a data model for storing codeblocks in a MongoDB
 const CodeBlock = mongoose.model("CodeBlock", CodeBlockSchema);
 
 export default CodeBlock;
