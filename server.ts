@@ -109,5 +109,6 @@ async function initializeCodeBlocks() {
 app.use("/", lobbyRouter);
 app.use("/api/codeblocks", codeBlockRouter);
 server.listen(PORT, () => {
+  console.log(`MongoDB URL: ${MONGO_URI}`);
   console.log(`Server running on http://localhost:${PORT}`);
 });
